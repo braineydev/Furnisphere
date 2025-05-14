@@ -1,7 +1,7 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import Navcomponent from "./Navcomponent";
+
 import CarouselComponent from "./carouselcomponent";
 import Footer from "./Footer";
 
@@ -53,7 +53,6 @@ const Getproducts = () => {
 
   return (
     <div className="row justify-content-center">
-      <Navcomponent />
       <CarouselComponent />
       <hr
         style={{ height: "5px", backgroundColor: "#000000", border: "none" }}

@@ -1,7 +1,6 @@
 import axios from "axios";
 import React, { useState } from "react";
 import Footer from "./Footer";
-import Navcomponent from "./Navcomponent";
 
 const Addproduct = () => {
   const [product_name, setProductname] = useState("");
@@ -45,7 +44,6 @@ const Addproduct = () => {
   };
   return (
     <div className="row justify-content-center ">
-      <Navcomponent></Navcomponent>
       <div className="card shadow col-md-6 p-4 text center">
         <h2>Add Product</h2>
         <form onSubmit={submit} className="mt-5 mb-5">

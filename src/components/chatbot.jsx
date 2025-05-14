@@ -22,7 +22,6 @@ const Chatbot = () => {
 
   return (
     <div>
-      <Navcomponent></Navcomponent>
       <div
         style={{
           maxWidth: "600px", // Set a max width for the chatbot container

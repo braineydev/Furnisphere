@@ -2,7 +2,6 @@ import axios from "axios";
 import React, { useState } from "react";
 import { useLocation } from "react-router-dom";
 import Footer from "./Footer";
-import Navcomponent from "./Navcomponent";
 
 const Makepayment = () => {
   const { product, img_url } = useLocation().state || {};
@@ -42,8 +41,6 @@ const Makepayment = () => {
 
   return (
     <div className="row justify-content-center">
-      <Navcomponent />
-
       <div className="card m-5 col-md-6 justify-content-center text-center">
         <h1 className="text-success">Lipa na Mpesa</h1>
         <img

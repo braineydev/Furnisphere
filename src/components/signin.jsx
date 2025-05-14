@@ -2,7 +2,7 @@ import axios from "axios";
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import Footer from "./Footer";
-import Navcomponent from "./Navcomponent";
+
 import { FaEye, FaEyeSlash } from "react-icons/fa"; // Import eye icons from React Icons
 
 const Signin = () => {
@@ -49,7 +49,6 @@ const Signin = () => {
 
   return (
     <div className="row justify-content-center">
-      <Navcomponent />
       <div className="card shadow col-md-4 pt-4 text-center">
         <h2>Sign In</h2>
         <form onSubmit={submit} className="mt-5 mb-5">

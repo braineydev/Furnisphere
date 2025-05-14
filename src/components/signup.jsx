@@ -2,7 +2,7 @@ import axios from "axios";
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import Footer from "./Footer";
-import Navcomponent from "./Navcomponent";
+
 import { FaEye, FaEyeSlash } from "react-icons/fa"; // Importing eye icons
 
 const Signup = () => {
@@ -51,7 +51,6 @@ const Signup = () => {
 
   return (
     <div className="row justify-content-center mb-0 ">
-      <Navcomponent />
       <div className="card shadow p-4 col-md-6 text-center sign">
         <h2>Sign up</h2>
         {/* On form submission, invoke submit function */}
