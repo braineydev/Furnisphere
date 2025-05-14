@@ -5,6 +5,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 const Navcomponent = () => {
   const navigate = useNavigate();
   const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const [isNavExpanded, setIsNavExpanded] = useState(false); // State for toggling navbar
 
   // Check login status on component mount and when event is dispatched
   useEffect(() => {
@@ -34,6 +35,11 @@ const Navcomponent = () => {
     navigate("/signin");
   };
 
+  // Handle navbar toggle
+  const toggleNavbar = () => {
+    setIsNavExpanded(!isNavExpanded);
+  };
+
   return (
     <div
       className="container-fluid mb-0 mt-2"
@@ -61,15 +67,20 @@ const Navcomponent = () => {
             </Link>
             <button
               className="navbar-toggler"
-              data-bs-toggle="collapse"
-              data-bs-target="#navbarcollapse"
+              type="button"
+              onClick={toggleNavbar} // Added toggle function
+              aria-controls="navbarNav"
+              aria-expanded={isNavExpanded ? "true" : "false"} // Dynamic aria-expanded
+              aria-label="Toggle navigation"
             >
               <span className="navbar-toggler-icon"></span>
             </button>
 
             <div
-              className="collapse navbar-collapse justify-content-end"
-              id="navbarcollapse"
+              className={`collapse navbar-collapse justify-content-end ${
+                isNavExpanded ? "show" : ""
+              }`} // Dynamically add "show" class
+              id="navbarNav"
             >
               <div className="navbar-nav me-3">
                 <Link
